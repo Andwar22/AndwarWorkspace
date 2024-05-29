@@ -1,6 +1,6 @@
 <script>
   export default {
-    name: 'WorkSpace',
+    name: 'PlaySpace',
     methods: {
       goToMain() {
         this.$router.push({ name: 'MainPage' });
@@ -11,7 +11,7 @@
 
 <template>
   <div>
-    <h1>Work Space</h1>
+    <h1>Play Space</h1>
     <button @click="goToMain">Go to Home Page</button>
   </div>
 </template>
