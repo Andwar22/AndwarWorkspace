@@ -3,24 +3,7 @@
 @import url(/css/work-space.css);
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
-/* #region ========== DEFAULT */
-  
-  main {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--dark);
-    background-image: url(https://img.freepik.com/free-vector/dark-black-background-design-with-stripes_1017-38064.jpg?t=st=1709893029~exp=1709896629~hmac=baf80761a35e50333bb646de1f78daae402122d060bdeb7c186bad674be24a39&w=1060);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden auto;
-  }
-  * p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-/* #endregion ======= DEFAULT END */
+
 
 /* #region ========== SCROLLBAR */
   *::-webkit-scrollbar {
