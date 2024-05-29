@@ -1,53 +1,39 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import Khalif from './components/Khalif.vue';
+  import JudulPath from './components/JudulPath.vue';
+  import ItemPath from './components/ItemPath.vue';
+  import IconLampu from './components/icons/IconLampu.vue';
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="./assets/images/logo.svg" width="125" height="125" />
+  <div class="main-page">
+      <div class="choose-path">
+        <JudulPath msg="Ate lapo yooo??" />
+        
+        <div class="wrap-item-path">
+          <ItemPath>
+            <template #icon>
+              <IconLampu />
+            </template>
+            <template #title>Kerjo</template>
+            <a href="/layout/work-space.html">KERJO</a>
+          </ItemPath>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+          <ItemPath>
+            <template #icon>
+              <IconLampu />
+            </template>
+            <template #title>Dodolan</template>
+            <a href="">KERJO</a>
+          </ItemPath>
+
+          <ItemPath>
+            <template #icon>
+              <IconLampu />
+            </template>
+            <template #title>Dolanan</template>
+            <a href="">KERJO</a>
+          </ItemPath>
+        </div>
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main> -->
-
-  <Khalif/>
 </template>
-
-<style scoped>
-
-
-
-/* header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-} */
-</style>
