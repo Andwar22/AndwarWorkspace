@@ -20,10 +20,12 @@
 <style scoped>
     .item-path {
         width: calc(100% / 3);
+        min-height: 200px;
         padding: 1rem;
         background-color: #fbfbfbda;
         transition: var(--anim);
         border-radius: 1rem;
+        cursor: pointer;
         
         &:hover {
             background-color: var(--white);
@@ -38,7 +40,7 @@
 
             & p:first-child {
                 color: var(--black);
-                font-size: 1.2rem;
+                font-size: 1.25rem;
                 font-weight: 700;
                 text-transform: capitalize;
                 margin-bottom: .25rem;

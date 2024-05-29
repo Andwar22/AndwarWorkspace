@@ -1,7 +1,9 @@
-<script setup>
-  import MainPath from './components/main-page/MainPath.vue';
+<script>
+  export default {
+    name: 'App'
+  };
 </script>
 
 <template>
-  <MainPath />
+  <router-view></router-view>
 </template>
