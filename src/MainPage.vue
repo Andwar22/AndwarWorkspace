@@ -1,8 +1,8 @@
 <script setup>
     import JudulPath from './components/main-page/JudulPath.vue';
     import ItemPath from './components/main-page/ItemPath.vue';
-    import IconLaptop from './components/icons/IconLaptop.vue';
-    import IconStore from './components/icons/IconStore.vue';
+    import IconCoding from './components/icons/IconCoding.vue';
+    import IconBox from './components/icons/IconBox.vue';
     import IconController from './components/icons/IconController.vue';
 </script>
 
@@ -31,7 +31,7 @@
             <div class="menu-path">
                 <ItemPath @click="goToWorkSpace">
                     <template #icon>
-                        <IconLaptop />
+                        <IconCoding />
                     </template>
                     <template #title>Kerjo</template>
                     <template #desc>Mencari nafkah lewat jalur bekerja sebagai hacker di PT Mencari Cinta Sejati. &#128526;</template>
@@ -39,7 +39,7 @@
 
                 <ItemPath @click="goToSellSpace">
                     <template #icon>
-                        <IconStore />
+                        <IconBox />
                     </template>
                     <template #title>Dodolan</template>
                     <template #desc>Mencari nafkah tambahan lewat jalur jualan, semacam side quest lah ya. &#128540;</template>
