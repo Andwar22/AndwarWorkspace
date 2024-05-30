@@ -1,18 +1,30 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
-import MainPath from '@/MainPath.vue';
+import MainPage from '@/MainPage.vue';
 import WorkSpace from '@/WorkSpace.vue';
+import SellSpace from '@/SellSpace.vue';
+import PlaySpace from '@/PlaySpace.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'MainPath',
-    component: MainPath
+    name: 'MainPage',
+    component: MainPage
   },
   {
     path: '/work-space',
     name: 'WorkSpace',
     component: WorkSpace
+  },
+  {
+    path: '/sell-space',
+    name: 'SellSpace',
+    component: SellSpace
+  },
+  {
+    path: '/play-space',
+    name: 'PlaySpace',
+    component: PlaySpace
   }
 ];
 

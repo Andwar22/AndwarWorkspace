@@ -3,15 +3,7 @@
 
 #app {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: var(--dark);
-  background-image: url(https://img.freepik.com/free-vector/dark-black-background-design-with-stripes_1017-38064.jpg?t=st=1709893029~exp=1709896629~hmac=baf80761a35e50333bb646de1f78daae402122d060bdeb7c186bad674be24a39&w=1060);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   overflow: hidden auto;
 }
