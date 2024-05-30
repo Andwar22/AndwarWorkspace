@@ -1,4 +1,3 @@
-
 <script setup>
 defineProps({
   msg: {
@@ -9,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-    <p>{{msg}}</p>
+    <p>{{ msg }}</p>
 </template>
 
 <style scoped>

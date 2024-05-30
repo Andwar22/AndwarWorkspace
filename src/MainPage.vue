@@ -49,7 +49,7 @@
                     <template #icon>
                         <IconController />
                     </template>
-                    <template #title>Hiburan</template>
+                    <template #title>Nyantai</template>
                     <template #desc>Kalau waktu sudah mulai melonggar, waktunya rehat sejenak pemirsa. &#129321;</template>
                 </ItemPath>
             </div>
