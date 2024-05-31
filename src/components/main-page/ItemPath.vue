@@ -12,7 +12,6 @@
                     <slot name="desc"></slot>
                 </p>
             </div>
-            <slot></slot>
         </div>
     </div>
 </template>

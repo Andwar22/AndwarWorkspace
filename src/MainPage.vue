@@ -64,7 +64,7 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        background-color: var(--dark);
+        background-color: var(--black);
         background-image: url(https://img.freepik.com/free-vector/dark-black-background-design-with-stripes_1017-38064.jpg?t=st=1709893029~exp=1709896629~hmac=baf80761a35e50333bb646de1f78daae402122d060bdeb7c186bad674be24a39&w=1060);
         background-size: cover;
         background-repeat: no-repeat;
