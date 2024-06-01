@@ -1,26 +1,63 @@
 <script setup>
+    import { ref, markRaw } from 'vue';
+    import { useRouter } from 'vue-router';
     import JudulPath from './components/main-page/JudulPath.vue';
     import ItemPath from './components/main-page/ItemPath.vue';
     import IconCoding from './components/icons/IconCoding.vue';
     import IconBox from './components/icons/IconBox.vue';
     import IconController from './components/icons/IconController.vue';
-</script>
 
-<script>
-  export default {
-    name: 'MainPage',
-    methods: {
-      goToWorkSpace() {
-        this.$router.push({ name: 'WorkSpace' });
-      },
-      goToSellSpace() {
-        this.$router.push({ name: 'SellSpace' });
-      },
-      goToPlaySpace() {
-        this.$router.push({ name: 'PlaySpace' });
-      }
-    }
-  };
+    // Define components
+    const componentMap  = {
+        IconCoding: markRaw(IconCoding),
+        IconBox: markRaw(IconBox),
+        IconController: markRaw(IconController)
+    };
+
+    // Data
+    const itemsGroups = ref([
+        {
+            item1: componentMap .IconCoding,
+            item2: 'Kerjo',
+            item3: 'Mencari nafkah lewat jalur bekerja sebagai hacker di PT Mencari Cinta Sejati. &#128526;'
+        },
+        {
+            item1: componentMap .IconBox,
+            item2: 'Dodolan',
+            item3: 'Mencari nafkah tambahan lewat jalur jualan, semacam side quest lah ya. &#128540;'
+        },
+        {
+            item1: componentMap .IconController,
+            item2: 'Nyantai',
+            item3: 'Kalau waktu sudah mulai melonggar, waktunya rehat sejenak pemirsa. &#129321;'
+        }
+    ]);
+
+    // Router
+    const router = useRouter();
+
+    // Methods
+    const handleClick = (index) => {
+        if (index === 0) {
+            goToWorkSpace();
+        } else if (index === 1) {
+            goToSellSpace();
+        } else if (index === 2) {
+            goToPlaySpace();
+        }
+    };
+
+    const goToWorkSpace = () => {
+        router.push({ name: 'WorkSpace' });
+    };
+
+    const goToSellSpace = () => {
+        router.push({ name: 'SellSpace' });
+    };
+
+    const goToPlaySpace = () => {
+        router.push({ name: 'PlaySpace' });
+    };
 </script>
 
 <template>
@@ -29,28 +66,14 @@
             <JudulPath msg="Mau ngapain hari ini?" />
             
             <div class="menu-path">
-                <ItemPath @click="goToWorkSpace">
+                <ItemPath v-for="(itemGroup, index) in itemsGroups" :key="index" @click="handleClick(index)">
                     <template #icon>
-                        <IconCoding />
+                        <component :is="itemGroup.item1"></component>
                     </template>
-                    <template #title>Kerjo</template>
-                    <template #desc>Mencari nafkah lewat jalur bekerja sebagai hacker di PT Mencari Cinta Sejati. &#128526;</template>
-                </ItemPath>
-
-                <ItemPath @click="goToSellSpace">
-                    <template #icon>
-                        <IconBox />
+                    <template #title>{{ itemGroup.item2 }}</template>
+                    <template #desc>
+                        <span v-html="itemGroup.item3"></span>
                     </template>
-                    <template #title>Dodolan</template>
-                    <template #desc>Mencari nafkah tambahan lewat jalur jualan, semacam side quest lah ya. &#128540;</template>
-                </ItemPath>
-
-                <ItemPath @click="goToPlaySpace">
-                    <template #icon>
-                        <IconController />
-                    </template>
-                    <template #title>Nyantai</template>
-                    <template #desc>Kalau waktu sudah mulai melonggar, waktunya rehat sejenak pemirsa. &#129321;</template>
                 </ItemPath>
             </div>
         </div>
